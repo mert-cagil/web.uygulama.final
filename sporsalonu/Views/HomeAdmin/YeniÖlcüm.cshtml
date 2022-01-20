@@ -1,0 +1,95 @@
+﻿@model sporsalonu.Models.entity.üyebilgidetay
+
+@{
+    ViewBag.Title = "YeniÖlcüm";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    body {
+        background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+        background: linear-gradient(to right, #25c481, #25b7c4);
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .textboxlar {
+        margin-left: 35%;
+        width: 750px;
+        border-radius: 8px;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .labellar {
+        margin-top: 100%;
+        margin-left: 48%;
+        font-size: 30px;
+        color: black;
+    }
+
+    .button {
+        width: 20%;
+        margin-left: 43%;
+        height: 60px;
+        border-radius: 8px;
+        background-color: #37ff20;
+        color: #ff0000;
+        font-size: 30px;
+    }
+</style>
+<form method="post">
+    <br /><br /><br />
+    <div>
+        <label class="labellar">Üye Adı</label>
+        <br />
+        @Html.TextBoxFor(m => m.ad, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.ad, "", new { @style = "color:red" })
+    </div>
+    <div>
+        <br />
+        <label class="labellar">Soyadı</label>
+        <br />
+        @Html.TextBoxFor(m => m.soyad, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.soyad, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label class="labellar">Tel</label>
+        <br />
+        @Html.TextBoxFor(m => m.tel, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.tel, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label class="labellar">Boy</label>
+        <br />
+        @Html.TextBoxFor(m => m.boy, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.boy, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label class="labellar">Kilo</label>
+        <br />
+        @Html.TextBoxFor(m => m.kilo, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.kilo, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label class="labellar">Ölçüm</label>
+        <br />
+        @Html.TextBoxFor(m => m.ölçüm, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.ölçüm, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label class="labellar">Tarih</label>
+        <br />
+        @Html.TextBoxFor(m => m.tarih, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.tarih, "", new { @style = "color:red" })
+    </div>
+    <div style="margin-top:30px">
+        <button class="button">Ölçüm Ekle</button>
+    </div>
+</form>
+
+

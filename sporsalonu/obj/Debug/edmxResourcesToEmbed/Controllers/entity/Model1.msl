@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sporsalonuModelStoreContainer" CdmEntityContainer="sporsalonuEntities">
+    <EntitySetMapping Name="admingiriş">
+      <EntityTypeMapping TypeName="sporsalonuModel.admingiriş">
+        <MappingFragment StoreEntitySet="admingiriş">
+          <ScalarProperty Name="adminid" ColumnName="adminid" />
+          <ScalarProperty Name="adminkullaniciadi" ColumnName="adminkullaniciadi" />
+          <ScalarProperty Name="adminşifre" ColumnName="adminşifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="etkinlik">
+      <EntityTypeMapping TypeName="sporsalonuModel.etkinlik">
+        <MappingFragment StoreEntitySet="etkinlik">
+          <ScalarProperty Name="etkinlikid" ColumnName="etkinlikid" />
+          <ScalarProperty Name="etkinlikadı" ColumnName="etkinlikadı" />
+          <ScalarProperty Name="etkinliktürü" ColumnName="etkinliktürü" />
+          <ScalarProperty Name="etkinlikhocası" ColumnName="etkinlikhocası" />
+          <ScalarProperty Name="etkinliktarih" ColumnName="etkinliktarih" />
+          <ScalarProperty Name="etkinlikkontejan" ColumnName="etkinlikkontejan" />
+          <ScalarProperty Name="etkinlikaçıklama" ColumnName="etkinlikaçıklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iletisim">
+      <EntityTypeMapping TypeName="sporsalonuModel.iletisim">
+        <MappingFragment StoreEntitySet="iletisim">
+          <ScalarProperty Name="iletisimid" ColumnName="iletisimid" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Açıklama" ColumnName="Açıklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanicigiriş">
+      <EntityTypeMapping TypeName="sporsalonuModel.kullanicigiriş">
+        <MappingFragment StoreEntitySet="kullanicigiriş">
+          <ScalarProperty Name="kullaniciid" ColumnName="kullaniciid" />
+          <ScalarProperty Name="kullanicigiriş1" ColumnName="kullanicigiriş" />
+          <ScalarProperty Name="kullanicişifre" ColumnName="kullanicişifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

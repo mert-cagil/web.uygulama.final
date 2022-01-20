@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutKullanıcı.cshtml";
+}
+<style>
+    body {
+        background-image: url("https://wallpaperaccess.com/full/1087594.jpg");
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+
+    html {
+        box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+    }
+
+    .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #474e5d;
+        color: white;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+        .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+    .title {
+        color: white;
+    }
+
+    .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: green;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        height:50px;
+    }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+    media screen and (max-width: 650px) {
+        .column
+
+    {
+        width: 100%;
+        display: block;
+    }
+
+    }
+    h1,p,h2{
+        color:white;
+    }
+</style>
+<div class="about-section">
+    <h1>Hakkımızda Sayfası</h1>
+    <p>Gym Center Olarak Her Daim Hizmetinizdeyiz.</p>
+    <p>Bizimle İletişime Geçmek İçin İletişim Sekmesinden Bize Ulaşabilirsiniz.</p>
+</div>
+
+<h2 style="text-align:center">Neler Yapıyoruz?</h2>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Z3ltfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Jane" style="width:100%">
+            <div class="container">
+                <h2>Rahat Ferah Ortam</h2>
+                <p class="title">Büyük Salon</p>
+                <p>Sporunuzu rahat bir şekilde yapabilirsiniz</p>
+                <p>gymcenter@example.com</p>
+                <a class="button" href="/Contact/Index">İletişim</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1579364046732-c21c2177730d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc4fHxneW18ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mike" style="width:100%">
+            <div class="container">
+                <h2>Motivasyon</h2>
+                <p class="title">Motivasyon Sözleri</p>
+                <p>Bu sözlerle motivasyonunuz artacak.</p>
+                <p>gymcenter@example.com</p>
+                <a class="button" href="/Contact/Index">İletişim</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1494959764136-6be9eb3c261e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW90aXZhdGlvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+            <div class="container">
+                <h2>Hedef</h2>
+                <p class="title">Hedef Planlamaları</p>
+                <p>Eğitmenlerimiz ile birlikte muhteşem bir şekilde gelişeceksiniz</p>
+                <p>gymcenter@example.com</p>
+                <a class="button" href="/Contact/Index">İletişim</a>
+                
+            </div>
+        </div>
+    </div>
+</div>

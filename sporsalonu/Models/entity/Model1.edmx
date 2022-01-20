@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="sporsalonuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="admingiriş">
+          <Key>
+            <PropertyRef Name="adminid" />
+          </Key>
+          <Property Name="adminid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="adminkullaniciadi" Type="varchar(max)" />
+          <Property Name="adminşifre" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="etkinlik">
+          <Key>
+            <PropertyRef Name="etkinlikid" />
+          </Key>
+          <Property Name="etkinlikid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="etkinlikadı" Type="varchar(max)" />
+          <Property Name="etkinliktürü" Type="varchar(max)" />
+          <Property Name="etkinlikhocası" Type="varchar(max)" />
+          <Property Name="etkinliktarih" Type="varchar(max)" />
+          <Property Name="etkinlikkontejan" Type="varchar(max)" />
+          <Property Name="etkinlikaçıklama" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="etkinlikbasvuruları">
+          <Key>
+            <PropertyRef Name="etkinlikid" />
+          </Key>
+          <Property Name="etkinlikid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="etkinlikadı" Type="varchar(max)" />
+          <Property Name="başvuranadsoyad" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="iletisim">
+          <Key>
+            <PropertyRef Name="iletisimid" />
+          </Key>
+          <Property Name="iletisimid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdSoyad" Type="varchar(max)" />
+          <Property Name="Telefon" Type="varchar(max)" />
+          <Property Name="Açıklama" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="kullanicigiriş">
+          <Key>
+            <PropertyRef Name="kullaniciid" />
+          </Key>
+          <Property Name="kullaniciid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullanicigiriş" Type="varchar(max)" />
+          <Property Name="kullanicişifre" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="üyebilgidetay">
+          <Key>
+            <PropertyRef Name="bilgiid" />
+          </Key>
+          <Property Name="bilgiid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="varchar(max)" />
+          <Property Name="soyad" Type="varchar(max)" />
+          <Property Name="tel" Type="varchar(max)" />
+          <Property Name="boy" Type="varchar(max)" />
+          <Property Name="kilo" Type="varchar(max)" />
+          <Property Name="ölçüm" Type="varchar(max)" />
+          <Property Name="tarih" Type="varchar(max)" />
+        </EntityType>
+        <EntityContainer Name="sporsalonuModelStoreContainer">
+          <EntitySet Name="admingiriş" EntityType="Self.admingiriş" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="etkinlik" EntityType="Self.etkinlik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="etkinlikbasvuruları" EntityType="Self.etkinlikbasvuruları" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iletisim" EntityType="Self.iletisim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kullanicigiriş" EntityType="Self.kullanicigiriş" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="üyebilgidetay" EntityType="Self.üyebilgidetay" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sporsalonuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="admingiriş">
+          <Key>
+            <PropertyRef Name="adminid" />
+          </Key>
+          <Property Name="adminid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="adminkullaniciadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="adminşifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="etkinlik">
+          <Key>
+            <PropertyRef Name="etkinlikid" />
+          </Key>
+          <Property Name="etkinlikid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="etkinlikadı" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="etkinliktürü" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="etkinlikhocası" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="etkinliktarih" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="etkinlikkontejan" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="etkinlikaçıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="etkinlikbasvuruları">
+          <Key>
+            <PropertyRef Name="etkinlikid" />
+          </Key>
+          <Property Name="etkinlikid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="etkinlikadı" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="başvuranadsoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="iletisim">
+          <Key>
+            <PropertyRef Name="iletisimid" />
+          </Key>
+          <Property Name="iletisimid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Telefon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="kullanicigiriş">
+          <Key>
+            <PropertyRef Name="kullaniciid" />
+          </Key>
+          <Property Name="kullaniciid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullanicigiriş1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="kullanicişifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="üyebilgidetay">
+          <Key>
+            <PropertyRef Name="bilgiid" />
+          </Key>
+          <Property Name="bilgiid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="boy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="kilo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ölçüm" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="tarih" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="sporsalonuEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="admingiriş" EntityType="Self.admingiriş" />
+          <EntitySet Name="etkinlik" EntityType="Self.etkinlik" />
+          <EntitySet Name="etkinlikbasvuruları" EntityType="Self.etkinlikbasvuruları" />
+          <EntitySet Name="iletisim" EntityType="Self.iletisim" />
+          <EntitySet Name="kullanicigiriş" EntityType="Self.kullanicigiriş" />
+          <EntitySet Name="üyebilgidetay" EntityType="Self.üyebilgidetay" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sporsalonuModelStoreContainer" CdmEntityContainer="sporsalonuEntities1">
+          <EntitySetMapping Name="admingiriş">
+            <EntityTypeMapping TypeName="sporsalonuModel.admingiriş">
+              <MappingFragment StoreEntitySet="admingiriş">
+                <ScalarProperty Name="adminid" ColumnName="adminid" />
+                <ScalarProperty Name="adminkullaniciadi" ColumnName="adminkullaniciadi" />
+                <ScalarProperty Name="adminşifre" ColumnName="adminşifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="etkinlik">
+            <EntityTypeMapping TypeName="sporsalonuModel.etkinlik">
+              <MappingFragment StoreEntitySet="etkinlik">
+                <ScalarProperty Name="etkinlikid" ColumnName="etkinlikid" />
+                <ScalarProperty Name="etkinlikadı" ColumnName="etkinlikadı" />
+                <ScalarProperty Name="etkinliktürü" ColumnName="etkinliktürü" />
+                <ScalarProperty Name="etkinlikhocası" ColumnName="etkinlikhocası" />
+                <ScalarProperty Name="etkinliktarih" ColumnName="etkinliktarih" />
+                <ScalarProperty Name="etkinlikkontejan" ColumnName="etkinlikkontejan" />
+                <ScalarProperty Name="etkinlikaçıklama" ColumnName="etkinlikaçıklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="etkinlikbasvuruları">
+            <EntityTypeMapping TypeName="sporsalonuModel.etkinlikbasvuruları">
+              <MappingFragment StoreEntitySet="etkinlikbasvuruları">
+                <ScalarProperty Name="etkinlikid" ColumnName="etkinlikid" />
+                <ScalarProperty Name="etkinlikadı" ColumnName="etkinlikadı" />
+                <ScalarProperty Name="başvuranadsoyad" ColumnName="başvuranadsoyad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iletisim">
+            <EntityTypeMapping TypeName="sporsalonuModel.iletisim">
+              <MappingFragment StoreEntitySet="iletisim">
+                <ScalarProperty Name="iletisimid" ColumnName="iletisimid" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Açıklama" ColumnName="Açıklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kullanicigiriş">
+            <EntityTypeMapping TypeName="sporsalonuModel.kullanicigiriş">
+              <MappingFragment StoreEntitySet="kullanicigiriş">
+                <ScalarProperty Name="kullaniciid" ColumnName="kullaniciid" />
+                <ScalarProperty Name="kullanicigiriş1" ColumnName="kullanicigiriş" />
+                <ScalarProperty Name="kullanicişifre" ColumnName="kullanicişifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="üyebilgidetay">
+            <EntityTypeMapping TypeName="sporsalonuModel.üyebilgidetay">
+              <MappingFragment StoreEntitySet="üyebilgidetay">
+                <ScalarProperty Name="bilgiid" ColumnName="bilgiid" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="soyad" ColumnName="soyad" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="boy" ColumnName="boy" />
+                <ScalarProperty Name="kilo" ColumnName="kilo" />
+                <ScalarProperty Name="ölçüm" ColumnName="ölçüm" />
+                <ScalarProperty Name="tarih" ColumnName="tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

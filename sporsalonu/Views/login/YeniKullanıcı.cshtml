@@ -1,0 +1,143 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Kullanıcı Girişi</title>
+    <style>
+        * {
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url("https://wallpaperaccess.com/full/1087594.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .login {
+            width: 300px;
+            margin: 14px auto;
+            box-decoration-break height: 15rem;
+        }
+
+            .login-header,
+            .login p {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+        .login-cone {
+            width: 0;
+            margin-top: 78%;
+            margin-right: auto;
+            margin-left: auto;
+            border: 12px solid transparent;
+            border-bottom-color: rgba(32, 18, 230, 0.575);
+        }
+
+        .login-header {
+            background: rgba(32, 18, 230, 0.575);
+            padding: 20px;
+            font-size: 1.4rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .login-container {
+            border-style: groove;
+        }
+
+        .login p {
+            padding: 12px;
+        }
+
+        .login input {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            border-width: 1px;
+            border-style: solid;
+            padding: 16px;
+            outline: 0;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+            .login input[type="text"],
+            .login input[type="password"] {
+                background-color: transparent;
+                color: white;
+                font-weight: bolder;
+            }
+
+            .login input::placeholder {
+                color: white;
+                font-size: 14px;
+            }
+
+            .login input[type="submit"] {
+                background: rgb(74, 50, 211);
+                border-color: transparent;
+                color: white;
+                cursor: pointer;
+                border-radius: 10%;
+            }
+
+                .login input[type="submit"]:hover {
+                    background-color: #17c;
+                    transition: 0.8s;
+                }
+
+        h1 {
+            padding-left: 200px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login">
+
+        <div class="login-cone"></div>
+        <h3 class="login-header">KULLANICI KAYIT OL </h3>
+        <form method="post">
+
+            <p>
+                <input type="text" placeholder="Ad" required>
+            </p>
+            <p>
+                <input type="text" placeholder="Soyad" required>
+            </p>
+            <p>
+                <input type="text" name="kullanicigiriş1" placeholder="Kullanıcı Adı" required>
+            </p>
+            <p>
+                <input type="password" name="kullanicişifre" placeholder="Kullanıcı Şifre" required>
+            </p>
+            <p><input type="submit" value="Kayıt Ol"></p>
+            <a style="margin-left:100px; color:white;" href="/login/KullanıcıGiriş">Kullanıcı Girişi</a>
+            <br /><br />
+            <a style="margin-left:100px; color:white;" href="/login/AdminGiriş">Admin Girişi</a>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

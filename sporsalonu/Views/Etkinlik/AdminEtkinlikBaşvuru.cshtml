@@ -1,0 +1,105 @@
+﻿@using sporsalonu.Models.entity
+@model List<etkinlikbasvuruları>
+@{
+    ViewBag.Title = "AdminEtkinlikBaşvuru";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    /*
+    body {
+        background-image: url("https://wallpaperaccess.com/full/1087594.jpg");
+    }*/
+
+    .button2 {
+        width: 40px;
+        height: 20px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .güncellebuton {
+        width: 40px;
+        height: 20px;
+        background-color: green;
+        font-size: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    table {
+        margin-left: 15%;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .tbl-header {
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    .tbl-content {
+        height: 300px;
+        overflow-x: auto;
+        margin-top: 0px;
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    th {
+        padding: 20px 15px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    td {
+        padding: 15px;
+        text-align: left;
+        vertical-align: middle;
+        font-weight: 300;
+        font-size: 12px;
+        color: #fff;
+        border-bottom: solid 1px rgba(255,255,255,0.1);
+    }
+
+    body {
+        background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+        background: linear-gradient(to right, #25c481, #25b7c4);
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ETKİNLİK İD</th>
+        <th>ETKİNLİK ADI</th>
+        <th>BAŞVURAN ÜYE AD SOYAD</th>
+        <th>SİL</th>
+    </tr>
+    <tbody>
+        @foreach (var dgr in Model)
+        {
+            <tr>
+                <th>@dgr.etkinlikid</th>
+                <td>@dgr.etkinlikadı</td>
+                <td>@dgr.başvuranadsoyad</td>
+                <td style="color:red; font-size:20px;"><a href="/Etkinlik/SILBASVURU/@dgr.etkinlikid">SİL</a> </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

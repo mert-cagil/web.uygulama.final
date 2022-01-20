@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        /*body {
+            background-image: url("https://wallpaperaccess.com/full/1087594.jpg");
+        }*/
+        ul {
+            list-style-type: none;
+            margin: auto;
+            padding: 0;
+            overflow: hidden;
+            background-color: transparent;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+            li:last-child {
+                border-right: none;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-family: Calibri;
+                font-size: 20px;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: green;
+                }
+
+        .active {
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="#home">Spor Salonuna Hoşgeldiniz</a></li>
+        <li style="float:right"><a href="/login/AdminGiriş">Admin Girişi</a></li>
+        <li style="float:right"><a href="/login/KullanıcıGiriş">Kullanıcı Girişi</a></li>
+        <li style="float:right"><a href="/Contact/Index">İletişim</a></li>
+        <li style="float:right"><a href="/Hakkımızda/Index">Hakkımızda</a></li>
+        <li style="float:right"><a href="/Etkinlik/EtkinlikBaşvurular">Etkinlik Başvuruları</a></li>
+        <li style="float:right"><a href="/Etkinlik/Index">Etkinlikler</a></li>
+        <li style="float:right"><a href="/HomeKullanıcı/Index">Ana Sayfa</a></li>
+
+    </ul>
+
+</body>
+<div class="form-control">
+    @RenderBody()
+</div>
+</html>

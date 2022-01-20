@@ -1,0 +1,89 @@
+﻿@model sporsalonu.Models.entity.etkinlik
+
+@{
+    ViewBag.Title = "YeniEtkinlik";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    body {
+        background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+        background: linear-gradient(to right, #25c481, #25b7c4);
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .textboxlar {
+        margin-left:35%;
+        width: 750px;
+        border-radius: 8px;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .labellar {
+        margin-top: 100%;
+        margin-left: 48%;
+        font-size: 30px;
+        color: black;
+    }
+
+    .button {
+        width: 20%;
+        margin-left: 43%;
+        height: 60px;
+        border-radius: 8px;
+        background-color: #37ff20;
+        color: #ff0000;
+        font-size: 30px;
+    }
+</style>
+<form method="post">
+    <br /><br /><br />
+    <div>
+        <label class="labellar">Etkinlik Adı</label>
+        <br />
+        @Html.TextBoxFor(m => m.etkinlikadı, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.etkinlikadı, "", new { @style = "color:red" })
+    </div>
+    <div>
+        <br />
+        <label class="labellar">Etkinlik Türü</label>
+        <br />
+        @Html.TextBoxFor(m => m.etkinliktürü, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.etkinliktürü, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label class="labellar">Etkinlik Hocası</label>
+        <br />
+        @Html.TextBoxFor(m => m.etkinlikhocası, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.etkinlikhocası, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label class="labellar">Etkinlik Tarih</label>
+        <br />
+        @Html.TextBoxFor(m => m.etkinliktarih, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.etkinliktarih, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label class="labellar">Etkinlik Kontejan</label>
+        <br />
+        @Html.TextBoxFor(m => m.etkinlikkontejan, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.etkinlikkontejan, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label class="labellar">Etkinlik Açıklama</label>
+        <br />
+        @Html.TextBoxFor(m => m.etkinlikaçıklama, new { @class = "textboxlar" })
+        @Html.ValidationMessageFor(m => m.etkinlikaçıklama, "", new { @style = "color:red" })
+    </div>
+    <div style="margin-top:30px">
+        <button class="button">Etkinlik Ekle</button>
+    </div>
+</form>
+
+
+

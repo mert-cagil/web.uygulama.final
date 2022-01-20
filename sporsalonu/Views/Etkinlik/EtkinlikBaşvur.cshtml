@@ -1,0 +1,60 @@
+﻿@model sporsalonu.Models.entity.etkinlikbasvuruları
+@{
+    ViewBag.Title = "EtkinlikBaşvur";
+    Layout = "~/Views/Shared/_LayoutKullanıcı.cshtml";
+}
+
+
+<style>
+    body {
+        background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+        background: linear-gradient(to right, #25c481, #25b7c4);
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .textboxlar {
+        margin-top:30%;
+        margin-left: 35%;
+        width: 750px;
+        border-radius: 8px;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .labellar {
+        margin-top: 100%;
+        margin-left: 48%;
+        font-size: 30px;
+        color: black;
+    }
+
+    .button {
+        width: 20%;
+        margin-top:2%;
+        margin-left: 37%;
+        height: 60px;
+        border-radius: 8px;
+        background-color: #37ff20;
+        color: #ff0000;
+        font-size: 30px;
+    }
+</style>
+<form method="post">
+    <div style="margin-top:10%; margin-left:auto; margin-right:20%;">
+        <label class="labellar"> Etkinlik Adı</label>
+        <br />
+        @Html.TextBoxFor(m => m.etkinlikadı, new { @class = "textboxlar" })
+    <br />
+    </div>
+    <br />
+    <br />
+    <div style="margin-left:auto; margin-right:20%;">
+        <label class="labellar">Başvuran Ad Soyad</label>
+        <br />
+        @Html.TextBoxFor(m => m.başvuranadsoyad, new { @class = "textboxlar" })
+    </div>
+    <div>
+        <button class="button">Başvur</button>
+    </div>
+</form>
+

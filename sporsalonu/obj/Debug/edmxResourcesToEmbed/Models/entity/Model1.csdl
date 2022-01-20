@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sporsalonuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admingiriş">
+    <Key>
+      <PropertyRef Name="adminid" />
+    </Key>
+    <Property Name="adminid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adminkullaniciadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="adminşifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="etkinlik">
+    <Key>
+      <PropertyRef Name="etkinlikid" />
+    </Key>
+    <Property Name="etkinlikid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="etkinlikadı" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="etkinliktürü" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="etkinlikhocası" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="etkinliktarih" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="etkinlikkontejan" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="etkinlikaçıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="etkinlikbasvuruları">
+    <Key>
+      <PropertyRef Name="etkinlikid" />
+    </Key>
+    <Property Name="etkinlikid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="etkinlikadı" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="başvuranadsoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="iletisim">
+    <Key>
+      <PropertyRef Name="iletisimid" />
+    </Key>
+    <Property Name="iletisimid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Telefon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="kullanicigiriş">
+    <Key>
+      <PropertyRef Name="kullaniciid" />
+    </Key>
+    <Property Name="kullaniciid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullanicigiriş1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="kullanicişifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="üyebilgidetay">
+    <Key>
+      <PropertyRef Name="bilgiid" />
+    </Key>
+    <Property Name="bilgiid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="boy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="kilo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ölçüm" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="sporsalonuEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admingiriş" EntityType="Self.admingiriş" />
+    <EntitySet Name="etkinlik" EntityType="Self.etkinlik" />
+    <EntitySet Name="etkinlikbasvuruları" EntityType="Self.etkinlikbasvuruları" />
+    <EntitySet Name="iletisim" EntityType="Self.iletisim" />
+    <EntitySet Name="kullanicigiriş" EntityType="Self.kullanicigiriş" />
+    <EntitySet Name="üyebilgidetay" EntityType="Self.üyebilgidetay" />
+  </EntityContainer>
+</Schema>

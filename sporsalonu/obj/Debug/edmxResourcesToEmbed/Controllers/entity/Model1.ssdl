@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sporsalonuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admingiriş">
+    <Key>
+      <PropertyRef Name="adminid" />
+    </Key>
+    <Property Name="adminid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adminkullaniciadi" Type="varchar(max)" />
+    <Property Name="adminşifre" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="etkinlik">
+    <Key>
+      <PropertyRef Name="etkinlikid" />
+    </Key>
+    <Property Name="etkinlikid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="etkinlikadı" Type="varchar(max)" />
+    <Property Name="etkinliktürü" Type="varchar(max)" />
+    <Property Name="etkinlikhocası" Type="varchar(max)" />
+    <Property Name="etkinliktarih" Type="varchar(max)" />
+    <Property Name="etkinlikkontejan" Type="varchar(max)" />
+    <Property Name="etkinlikaçıklama" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="iletisim">
+    <Key>
+      <PropertyRef Name="iletisimid" />
+    </Key>
+    <Property Name="iletisimid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdSoyad" Type="varchar(max)" />
+    <Property Name="Telefon" Type="varchar(max)" />
+    <Property Name="Açıklama" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="kullanicigiriş">
+    <Key>
+      <PropertyRef Name="kullaniciid" />
+    </Key>
+    <Property Name="kullaniciid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullanicigiriş" Type="varchar(max)" />
+    <Property Name="kullanicişifre" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="sporsalonuModelStoreContainer">
+    <EntitySet Name="admingiriş" EntityType="Self.admingiriş" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="etkinlik" EntityType="Self.etkinlik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iletisim" EntityType="Self.iletisim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kullanicigiriş" EntityType="Self.kullanicigiriş" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
